@@ -5,15 +5,10 @@ function App() {
 
   useEffect(() => {
     (async function () {
-      try {
-        const response = await fetch('/api/message');
-        const result = await response.json();
-        setData(result.text);
-      } catch (error) {
-        console.error('Failed to fetch API:', error);
-      }
+      const { text } = await (await fetch(`/api/message`)).json();
+      setData(text);
     })();
-  }, []); // <--- Added dependency array to run only once
+  }, []); // <--- Added [] here!
 
   return <div>{data}</div>;
 }
