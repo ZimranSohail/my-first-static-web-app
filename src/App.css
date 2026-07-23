@@ -1,38 +1,105 @@
-.App {
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: #0f1117;
+  color: #f4f4f5;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 2rem;
+  background: #161925;
+  border-bottom: 1px solid #262a3a;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
+}
+
+.nav-links a {
+  color: #c9cbd6;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-size: 0.95rem;
+  transition: color 0.15s ease;
+}
+
+.nav-links a:hover {
+  color: #7c9bff;
+}
+
+.page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.page h1 {
+  font-size: 2.4rem;
+  margin-bottom: 0.75rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.subtitle {
+  color: #a1a5b7;
+  font-size: 1.05rem;
+  margin-bottom: 2.5rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+button {
+  background: #7c9bff;
+  color: #0f1117;
+  border: none;
+  padding: 0.9rem 1.8rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.1s ease, background 0.15s ease;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover:not(:disabled) {
+  background: #6a89f5;
+  transform: translateY(-1px);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.api-message {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  padding: 1rem 1.5rem;
+  background: #1c2030;
+  border: 1px solid #2d3350;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.schedule-list {
+  list-style: none;
+  text-align: left;
+  margin-top: 1rem;
+}
+
+.schedule-list li {
+  padding: 1rem 0;
+  border-bottom: 1px solid #262a3a;
+  font-size: 1.05rem;
+}
+
+.schedule-list li strong {
+  color: #7c9bff;
+  margin-right: 0.75rem;
 }
